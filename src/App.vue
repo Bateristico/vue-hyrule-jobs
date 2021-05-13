@@ -1,6 +1,10 @@
 <template>
   <div class="app">
     <header>
+      <div class="title">
+        <img src="./assets/heart.svg" alt="site logo">
+        <h1>Hyrule Jobs</h1>
+      </div>
       <div class="order">
         <button @click="handleClick('title')">order by title</button>
         <button @click="handleClick('salary')">order by salary</button>
@@ -23,11 +27,11 @@ export default defineComponent({
   setup() {
 
     const jobs = ref<Job[]>([
-      { title: 'farm worker', location: 'lon lon ranch', salary: 30000, id: '1'},
-      { title: 'quarryman', location: 'death mountain', salary: 102000, id: '2'},
-      { title: 'flute player', location: 'the lost woods', salary: 100000, id: '3'},
-      { title: 'fisher man', location: 'lake hylia', salary: 212000, id: '3'},
-      { title: 'prison guard', location: 'gerudo valley', salary: 300200, id: '3'}
+      { title: 'farm worker', location: 'lon lon ranch', salary: 30000, id: '1' },
+      { title: 'quarryman', location: 'death mountain', salary: 40000, id: '2' },
+      { title: 'flute player', location: 'the lost woods', salary: 35000, id: '3' },
+      { title: 'fisherman', location: 'lake hylia', salary: 21000, id: '4' },
+      { title: 'prison guard', location: 'gerudo valley', salary: 32000, id: '5' }
     ])
 
 
@@ -66,4 +70,19 @@ export default defineComponent({
     cursor: pointer;
     font-weight: bold;
   }
+
+  header .title{
+    display: flex;
+    justify-content: center;
+  }
+
+  header img {
+    width: 60px;
+    margin-right: 20px;
+  }
+
+  header h1 {
+    font-size: 3em;
+  }
+
 </style>
